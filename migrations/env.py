@@ -13,11 +13,12 @@ dotenv_path = os.path.join(os.path.dirname(__file__), '..', '.env')
 load_dotenv(dotenv_path)
 
 section = config.config_ini_section
-config.set_section_option(section, "DB_USER", os.getenv('DB_USER'))
-config.set_section_option(section, "DB_PASSWORD", os.getenv('DB_PASSWORD'))
-config.set_section_option(section, "DB_HOST", os.getenv('DB_HOST'))
-config.set_section_option(section, "DB_PORT", os.getenv('DB_PORT'))
-config.set_section_option(section, "DB_NAME", os.getenv('DB_NAME'))
+config.set_section_option(section, 'DB_USER', os.getenv('DB_USER'))
+config.set_section_option(section, 'DB_PASSWORD', os.getenv('DB_PASSWORD'))
+config.set_section_option(section, 'DB_HOST', os.getenv('DB_HOST'))
+config.set_section_option(section, 'DB_PORT', os.getenv('DB_PORT'))
+config.set_section_option(section, 'DB_NAME', os.getenv('DB_NAME'))
+config.set_section_option(section, 'DB_DRIVER_SYNC', os.getenv('DB_DRIVER_SYNC'))
 target_metadata = Base.metadata
 
 
